@@ -7,3 +7,4 @@
 //
 
 #import "UIImageView+WebCache.h"
+#import <AssetsLibrary/AssetsLibrary.h>

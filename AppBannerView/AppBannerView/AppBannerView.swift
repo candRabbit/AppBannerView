@@ -72,11 +72,7 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
         self.photos = photos
     }
     
-    
-    //默认滚动位置 屏幕的宽度按
-    
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         if abs((scrollView.contentOffset.x - self.bounds.width)) >= self.bounds.width{
             
             if scrollView.contentOffset.x == 0{
@@ -93,16 +89,16 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
                     
                     currentPage = 0
                 }
-
+                
             }
             pageChangeDelegate?.pageChange(currentPage)
             
             self.setContentOffset(CGPoint(x: self.bounds.width, y: 0), animated: false)
-           let imageView =  self.subviews[1] as! UIImageView
-              imageView.sd_setImageWithURL(NSURL(string: photos![currentPage])!)
-               let leftImageView = self.subviews[0] as! UIImageView
+            let imageView =  self.subviews[1] as! UIImageView
+            imageView.sd_setImageWithURL(NSURL(string: photos![currentPage])!)
+            let leftImageView = self.subviews[0] as! UIImageView
             if currentPage-1 == -1{
-             
+                
                 leftImageView.sd_setImageWithURL(NSURL(string: photos![photos!.count-1]))
             }else{
                 leftImageView.sd_setImageWithURL(NSURL(string: photos![currentPage-1]))
@@ -116,6 +112,13 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
         }
         
         
+    }
+    
+    //默认滚动位置 屏幕的宽度按
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+    
     }
     
 }
