@@ -8,6 +8,9 @@
 
 import UIKit
 
+let imageHeight = 180
+let padding  = 5
+
 class WaterModel:WaterBaseModel {
 
     var text:String?
@@ -19,16 +22,12 @@ class WaterModel:WaterBaseModel {
         self.imageUrl = imageUrl
     }
     
-    
      func getCellHeight()->CGFloat{
-        let dic = UIFont.systemFontOfSize(15).fontDescriptor().fontAttributes()
-
-        let cellWidth = SCRRENRECT.width
+        let dic = NSDictionary(object: UIFont.systemFontOfSize(CGFloat(15)), forKey: NSFontAttributeName)
+        let cellWidth = SCRRENRECT.width/2
         let contentText = text! as NSString
-        let textHeight =  contentText.boundingRectWithSize(CGSizeMake(cellWidth/2, 3200), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: dic, context: nil).height
-        print(textHeight)
-        let imageHeight = cellWidth/2
-        return textHeight + imageHeight
+        let textHeight = contentText.boundingRectWithSize(CGSizeMake(cellWidth-10, 3200), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: dic as? [String : AnyObject], context: nil).size.height
+        return textHeight + CGFloat(imageHeight+padding*2)
         
     }
     

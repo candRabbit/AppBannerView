@@ -10,7 +10,8 @@ import UIKit
 
 class WaterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    
+   
+    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var label: UILabel!
     
 }

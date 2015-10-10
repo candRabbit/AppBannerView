@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2E19071BC8E7C0002229EB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E19061BC8E7C0002229EB /* String.swift */; settings = {ASSET_TAGS = (); }; };
+		1D2E19091BC8E97F002229EB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E19081BC8E97F002229EB /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
+		1D2E190B1BC8ECB1002229EB /* water.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E190A1BC8ECB1002229EB /* water.json */; settings = {ASSET_TAGS = (); }; };
 		1DCC1C921BC7A48300433859 /* LooperPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC1C901BC7A48300433859 /* LooperPhoto.swift */; settings = {ASSET_TAGS = (); }; };
 		1DCC1C931BC7A48300433859 /* WaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC1C911BC7A48300433859 /* WaterFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		1DCC1C951BC7A4AB00433859 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCC1C941BC7A4AB00433859 /* AssetsLibrary.framework */; };
@@ -80,6 +83,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D2E19061BC8E7C0002229EB /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1D2E19081BC8E97F002229EB /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1D2E190A1BC8ECB1002229EB /* water.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = water.json; sourceTree = "<group>"; };
 		1DCC1C901BC7A48300433859 /* LooperPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooperPhoto.swift; sourceTree = "<group>"; };
 		1DCC1C911BC7A48300433859 /* WaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFlowLayout.swift; sourceTree = "<group>"; };
 		1DCC1C941BC7A4AB00433859 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -208,6 +214,7 @@
 		1DCC1C981BC7A57D00433859 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC1CC11BC7A57D00433859 /* UIScrollView+MJRefresh.h */,
 				1DCC1C991BC7A57D00433859 /* Base */,
 				1DCC1CA41BC7A57D00433859 /* Custom */,
 				1DCC1CBB1BC7A57D00433859 /* MJRefresh.bundle */,
@@ -216,7 +223,6 @@
 				1DCC1CBE1BC7A57D00433859 /* MJRefreshConst.m */,
 				1DCC1CBF1BC7A57D00433859 /* UIScrollView+MJExtension.h */,
 				1DCC1CC01BC7A57D00433859 /* UIScrollView+MJExtension.m */,
-				1DCC1CC11BC7A57D00433859 /* UIScrollView+MJRefresh.h */,
 				1DCC1CC21BC7A57D00433859 /* UIScrollView+MJRefresh.m */,
 				1DCC1CC31BC7A57D00433859 /* UIView+MJExtension.h */,
 				1DCC1CC41BC7A57D00433859 /* UIView+MJExtension.m */,
@@ -311,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCC1CDD1BC7A5BD00433859 /* photo.json */,
+				1D2E190A1BC8ECB1002229EB /* water.json */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -357,6 +364,7 @@
 			children = (
 				1DCC1CEC1BC7B06600433859 /* WaterBaseModel.swift */,
 				1DCC1CEE1BC7B39600433859 /* WaterModel.swift */,
+				1D2E19061BC8E7C0002229EB /* String.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 				60C7C5211BC68C7B00D0A6AE /* Assets.xcassets */,
 				60C7C5261BC68C7B00D0A6AE /* Info.plist */,
 				60C7C57B1BC68DA100D0A6AE /* app-bridging-header.h */,
+				1D2E19081BC8E97F002229EB /* Constant.swift */,
 			);
 			path = AppBannerView;
 			sourceTree = "<group>";
@@ -574,6 +583,7 @@
 				1DCC1CDE1BC7A5BD00433859 /* photo.json in Resources */,
 				60C7C5251BC68C7B00D0A6AE /* LaunchScreen.storyboard in Resources */,
 				60C7C5221BC68C7B00D0A6AE /* Assets.xcassets in Resources */,
+				1D2E190B1BC8ECB1002229EB /* water.json in Resources */,
 				1DCC1CD61BC7A57D00433859 /* MJRefresh.bundle in Resources */,
 				60C7C5201BC68C7B00D0A6AE /* Main.storyboard in Resources */,
 			);
@@ -602,6 +612,8 @@
 			files = (
 				1DCC1CD31BC7A57D00433859 /* MJRefreshGifHeader.m in Sources */,
 				60C7C5751BC68D7000D0A6AE /* UIImage+GIF.m in Sources */,
+				1D2E19091BC8E97F002229EB /* Constant.swift in Sources */,
+				1D2E19071BC8E7C0002229EB /* String.swift in Sources */,
 				1DCC1C971BC7A53C00433859 /* LooperViewController.swift in Sources */,
 				1DCC1CCF1BC7A57D00433859 /* MJRefreshAutoStateFooter.m in Sources */,
 				60C7C5701BC68D7000D0A6AE /* SDWebImageDownloader.m in Sources */,
