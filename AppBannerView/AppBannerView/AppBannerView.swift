@@ -39,7 +39,7 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
         self.showsVerticalScrollIndicator = false
         for (var i = 0;i<3;i++){
            let view = UIImageView(frame: CGRectMake(self.bounds.width*CGFloat(i), 0, self.bounds.width, self.bounds.height))
-            view.contentMode = UIViewContentMode.ScaleAspectFill
+            view.contentMode = UIViewContentMode.ScaleToFill
             
             var imageUrl:NSURL?
             if i == 0{
