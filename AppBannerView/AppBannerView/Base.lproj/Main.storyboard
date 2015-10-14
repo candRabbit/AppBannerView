@@ -153,25 +153,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QN5-ze-EKE">
-                                            <rect key="frame" x="5" y="5" width="177" height="251"/>
+                                            <rect key="frame" x="2" y="2" width="183" height="257"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bdV-Gf-yln">
-                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="180"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="eEZ-Ra-57m"/>
+                                                        <constraint firstAttribute="height" constant="120" id="eEZ-Ra-57m"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncf-JL-dai">
-                                                    <rect key="frame" x="0.0" y="180" width="177" height="71"/>
+                                                    <rect key="frame" x="0.0" y="120" width="183" height="137"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" red="0.86544992998571435" green="0.86544992998571435" blue="0.86544992998571435" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.86544993000000003" green="0.86544993000000003" blue="0.86544993000000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Ncf-JL-dai" firstAttribute="leading" secondItem="QN5-ze-EKE" secondAttribute="leading" id="0kY-8Y-bb9"/>
                                                 <constraint firstItem="Ncf-JL-dai" firstAttribute="top" secondItem="bdV-Gf-yln" secondAttribute="bottom" id="4n6-uS-WxX"/>
@@ -188,10 +188,10 @@
                                 </view>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="QN5-ze-EKE" secondAttribute="trailing" constant="5" id="0eo-u0-XgA"/>
-                                    <constraint firstItem="QN5-ze-EKE" firstAttribute="top" secondItem="tbI-Cf-nub" secondAttribute="top" constant="5" id="Uin-V7-4BX"/>
-                                    <constraint firstItem="QN5-ze-EKE" firstAttribute="leading" secondItem="tbI-Cf-nub" secondAttribute="leading" constant="5" id="eiL-DL-VNF"/>
-                                    <constraint firstAttribute="bottom" secondItem="QN5-ze-EKE" secondAttribute="bottom" constant="5" id="tZC-qi-r1n"/>
+                                    <constraint firstAttribute="trailing" secondItem="QN5-ze-EKE" secondAttribute="trailing" constant="2" id="0eo-u0-XgA"/>
+                                    <constraint firstItem="QN5-ze-EKE" firstAttribute="top" secondItem="tbI-Cf-nub" secondAttribute="top" constant="2" id="Uin-V7-4BX"/>
+                                    <constraint firstItem="QN5-ze-EKE" firstAttribute="leading" secondItem="tbI-Cf-nub" secondAttribute="leading" constant="2" id="eiL-DL-VNF"/>
+                                    <constraint firstAttribute="bottom" secondItem="QN5-ze-EKE" secondAttribute="bottom" constant="2" id="tZC-qi-r1n"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="bgView" destination="QN5-ze-EKE" id="c81-QV-mh3"/>

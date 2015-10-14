@@ -13,3 +13,9 @@ extension String{
     
 }
 
+extension NSObject{
+    
+    func local(local:()->Void){
+        local()
+    }
+}

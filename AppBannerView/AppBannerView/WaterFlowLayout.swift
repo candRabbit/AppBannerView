@@ -91,6 +91,8 @@ class WaterFlowLayout: UICollectionViewLayout {
      let cellRow = indexPath.row+1
      _ = size?.width
      _ = size?.height
+        
+      
      /**
       1  2  3
          5  6
@@ -130,6 +132,7 @@ class WaterFlowLayout: UICollectionViewLayout {
         return layoutAttributes
     }
 }
+
 
 protocol WaterLayoutDelegate{
     

@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController,PageChangeDelegate {
  var pageControl:UIPageControl?
+    var appBannerView:AppBannerView?
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        let appBannerView = AppBannerView(frame: CGRectMake(0, 64, self.view.bounds.width, 220),photos: bannerPhotos)
-        appBannerView.pageChangeDelegate = self
-        self.view.addSubview(appBannerView)
+        appBannerView = AppBannerView(frame: CGRectMake(0, 64, self.view.bounds.width, 220),photos: bannerPhotos)
+        appBannerView!.pageChangeDelegate = self
+        self.view.addSubview(appBannerView!)
         
         pageControl = UIPageControl(frame: CGRectMake(0, 250, self.view.bounds.width, 20))
         pageControl!.numberOfPages = 4
@@ -25,6 +26,10 @@ class ViewController: UIViewController,PageChangeDelegate {
         self.view.addSubview(pageControl!)
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        appBannerView!.stopScroll()
     }
 
     override func didReceiveMemoryWarning() {

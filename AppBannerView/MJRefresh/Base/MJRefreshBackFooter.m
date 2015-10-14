@@ -8,6 +8,13 @@
 
 #import "MJRefreshBackFooter.h"
 
+typedef struct{
+    
+    int age;
+    int name;
+}Person;
+
+
 @interface MJRefreshBackFooter()
 @property (assign, nonatomic) NSInteger lastRefreshCount;
 @property (assign, nonatomic) CGFloat lastBottomDelta;
@@ -19,6 +26,13 @@
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change
 {
     [super scrollViewContentOffsetDidChange:change];
+    
+    
+    
+    
+
+    
+   
     
     // 如果正在刷新，直接返回
     if (self.state == MJRefreshStateRefreshing) return;

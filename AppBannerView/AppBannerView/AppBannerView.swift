@@ -15,6 +15,8 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
     //记录当前的page
     var currentPage = 0
     var photos:[String]?
+    var autoScroll = true
+    var nsTimer:NSTimer?
     
     
     init(frame:CGRect,photos:[String]!){
@@ -55,15 +57,22 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
             
         }
          self.contentSize = CGSizeMake(self.bounds.width*CGFloat(photos!.count), 0)
-        
          self.setContentOffset(CGPoint(x: self.bounds.width, y: 0), animated: false)
+        
+        if autoScroll{
+           
+        nsTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("startScroll"), userInfo: nil, repeats: true)
+        }
     }
     
     
     func showPageIndex(index:Int){
         
         if index > currentPage{
-            
+         
+            self.setContentOffset(CGPointMake(self.bounds.width*2, 0), animated: true)
+        }else{
+            self.setContentOffset(CGPointMake(0, 0), animated: true)
         }
     }
     
@@ -114,12 +123,39 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
         
     }
     
+    
+    func startScroll(){
+
+        self.showPageIndex(currentPage+1)
+    }
+    
+    func stopScroll(){
+        
+       nsTimer?.invalidate()
+    }
+    
+    
+    
     //默认滚动位置 屏幕的宽度按
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
     
     }
+    
+    
+    func setBannerViewAutoScroll(autoScroll:Bool){
+    
+        self.autoScroll = autoScroll
+        
+        if !autoScroll{
+            
+            stopScroll()
+        }
+        
+    }
+    
+   
     
 }
 
