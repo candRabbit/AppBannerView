@@ -24,9 +24,10 @@ class ViewController: UIViewController,PageChangeDelegate {
         pageControl!.enabled = false
     
         self.view.addSubview(pageControl!)
-        
+     
         // Do any additional setup after loading the view, typically from a nib.
     }
+
     
     override func viewDidDisappear(animated: Bool) {
         appBannerView!.stopScroll()

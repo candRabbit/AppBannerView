@@ -61,7 +61,7 @@ class AppBannerView: UIScrollView,UIScrollViewDelegate{
         
         if autoScroll{
            
-        nsTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("startScroll"), userInfo: nil, repeats: true)
+        nsTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("startScroll"), userInfo: nil, repeats: true)
         }
     }
     
